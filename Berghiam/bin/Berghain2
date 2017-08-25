@@ -1,0 +1,37 @@
+object rochensen {
+	method siSosMAyorDe21 (unaPersona) {
+		return UnaPersona.edad > 21
+		}
+}
+object rodrigsen {
+	method pasasSiEstasDeNegro(unaPersona) {
+		return unaPersona.edad == "negro" }
+		}
+object gushtavotruccensen {
+	method noPasaFenomeno (unaPersona) {
+		return "Hoy no es tu noche."}
+}
+
+
+object mainRoom {
+	method bailar(unaPersona) {
+		unaPersona.energia =-40
+		unaPersona.diversion =+30
+	}
+object panoramaBar {
+	method dixon(unaPersona){
+		unaPersona.energia =+ 60
+		unaPersona.diversion =+120
+	method marcelDettmann(unaPersona){
+		unaPersona.energia=0
+		unaPersona.diversion=+1000
+	}	
+	method tommyMuñoz (unaPersona){
+		unaPersona.energia =-80
+	}
+}
+object darkRoom{
+	method bailar(unaPersona){
+		unaPersona.energia= 0
+		}
+}

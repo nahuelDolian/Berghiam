@@ -1,0 +1,36 @@
+object vonLukaz {
+	
+	var energia=150
+	var diversion=70
+	
+	method edad () {
+		return 17
+		}
+	method ropa {
+		return "blanco"
+		}
+}
+object bianker {
+	
+	var energia=140
+	var diversion=80
+		
+	method edad {
+		return 22
+		}
+	method ropa {
+		return "negro"
+		}
+}
+object gonzen {
+	var energia = 90
+	var diversion = 15
+	
+	method edad {
+		return 33
+	}
+	
+	method ropa {
+		return "negro"
+	}
+}

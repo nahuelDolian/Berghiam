@@ -1,0 +1,28 @@
+import Personas.*
+import Berghain.*
+
+describe "Tests de Berghiam y Personas" {
+
+	test "Personas: vonLukaz tiene 150(energia) y 70(diversion) preestablecido" {
+
+		assert.equals(150, vonLukaz.energia())
+		assert.equals(70, vonLukaz.diversion())
+
+	}
+	test "Personas: bianker tiene 140(energia) y 80(diversion) preestablecido"{
+
+		assert.equals(140, bianker.energia())
+		assert.equals(80, bianker.diversion())
+	}
+	test "Personas : gonzen tiene 90(energia) y 15(diversion) preestablecido"{
+
+		assert.equals(90, bianker.energia())
+		assert.equals(15, bianker.diversion())
+	}
+	test "rocha la deja pasar a bianquita" {
+		assert.that(rochensen.dejaPasarA(bianker))
+	}
+	test "rocha no deja pasar a vonLukaz"{
+		assert.that(rochensen.dejaPasarA(vonLukaz))
+	}
+}
