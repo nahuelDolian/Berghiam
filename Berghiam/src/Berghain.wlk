@@ -21,12 +21,18 @@ object gushtavotruccensen {
 
 
 object mainRoom {
+	var personas = #{}
 	
-	method bailar(unaPersona) {
+	
+	method bailar() {
+		personas.forEach({p=>p.     })
 		unaPersona.perderEnergia(40) 
 		unaPersona.subirDiversion(30) 
 	return unaPersona}
-
+	
+	
+	method entrarAPista(unaPersona){
+		personas.add(unaPersona)
 }
 object panoramaBar {
 	
