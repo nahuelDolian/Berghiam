@@ -23,6 +23,6 @@ describe "Tests de Berghiam y Personas" {
 		assert.that(rochensen.dejaPasarA(bianker))
 	}
 	test "rocha no deja pasar a vonLukaz"{
-		assert.that(rochensen.dejaPasarA(vonLukaz))
+		assert.notThat(rochensen.dejaPasarA(vonLukaz))
 	}
 }

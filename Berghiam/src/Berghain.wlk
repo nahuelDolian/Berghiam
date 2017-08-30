@@ -19,40 +19,81 @@ object gushtavotruccensen {
 	}
 }
 
-
+object berghain {
+	var personas = #{}
+}
 object mainRoom {
 	var personas = #{}
 	
-	
-	method bailar() {
-		personas.forEach({p=>p.     })
-		unaPersona.perderEnergia(40) 
-		unaPersona.subirDiversion(30) 
-	return unaPersona}
-	
-	
-	method entrarAPista(unaPersona){
+	method hacerBailarA() {
+		personas.forEach({ p=> p.bailarEnMainRoom()}) 
+	 }
+	method agregarPersonas(unaPersona){
+		unaPersona.entrarAUnaPista(mainRoom)
 		personas.add(unaPersona)
-}
-object panoramaBar {
-	
-	method dixon(unaPersona){
-		unaPersona.ganarEnergia(60)
-		unaPersona.subirDiversion(120)
-		}
-	
-	method marcelDettmann(unaPersona){
-		unaPersona.quedeMatado()
-		unaPersona.subirDiversion(1000)
-	}	
-	
-	method tommyMunioz(unaPersona) {
-		unaPersona.perderEnergia(80)
+	}
+	method cuantosSomos(){
+		return personas.size()
 	}
 }
-object darkRoom{
+
+
+object panoramaBar { 
+	var personas = #{}
+	var djActual
+	method agregarPersonas(unaPersona){
+		personas.add(unaPersona)
+		unaPersona.entrarAUnaPista(panoramaBar)
+	}
+	method hoyToca(unDj){
+		djActual=unDj
+	}
 	
-	method bailar(unaPersona){
-		unaPersona.quedeMatado()
+	method pasarMusica(){
+		dJActual.tocar(personas)
 		}
+		
+	method cuantosSomos(){
+		return personas.size()
+	}
+	
+}
+
+object dixon {
+	
+	method tocar(personas){
+		personas.forEach({ p=> p.bailarConDixon() })
+		
+	}
+}
+
+
+object marcelDettmannn {
+	
+	method tocar (personas){
+		personas.forEach({ p=> p.bailarConDettmann() })
+		
+	}
+}
+
+object tommyMunioz {
+	
+	method tocar(personas){
+		personas.forEach({ p=> p.bailarConTommyMunioz() })
+		
+	}
+}
+
+
+object darkRoom{
+	var personas = #{}
+	
+	method agregarPersonas(unaPersona){
+		personas.add(unaPersona)
+		unaPersona.entrarAUnaPista(mainRoom)
+	}
+	
+	method cuantosSomos(){
+		return personas.size()
+	}
 }
